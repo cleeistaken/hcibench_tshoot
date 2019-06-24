@@ -5,7 +5,6 @@
 
 This section lists basic steps to troubleshoot an error during validation stating a problem with SSH.
 
-
 1. On the ESX hosts insure the following services are running:
 
   * ESXi Shell
@@ -42,7 +41,7 @@ This section lists basic steps to troubleshoot an error during validation statin
   </div>
 
 
-4. From HCIBench insure you can SSH to the SSH hosts. This step validates if there are any ACL or firewall rules that might be affecting connectivity.
+4. From HCIBench insure you can SSH to the SSH hosts. This step validates if there are any ACL or firewall rules that might be affecting SSH connectivity or traffic with TCP port 22.
 
    N.B. If this test fails, there are configuration issues with the underlying network. A network specialist should investigate and validate the network configuration to insure there the required ACL or firewall rules are configured.
 
