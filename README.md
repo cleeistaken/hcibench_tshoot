@@ -5,6 +5,7 @@
 
 This section lists basic steps to troubleshoot an error during validation stating a problem with SSH.
 
+
 1. On the ESX hosts insure the following services are running:
 
   * ESXi Shell
@@ -13,6 +14,7 @@ This section lists basic steps to troubleshoot an error during validation statin
   <div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:left; vertical-align: middle; padding:20px 20px 20px 20px;">
     <img src="images/esxi_ssh_services.png" alt="ESX SSH Services">
   </div>
+
 
 2. From HCIBench insure you can ping the host by IPs. This step validates:
 
@@ -27,6 +29,7 @@ This section lists basic steps to troubleshoot an error during validation statin
     <img src="images/ping_by_ip.png" alt="Ping by IP">
   </div>
 
+
 3. If hostnames are used, from HCIBench insure you can resolve ESX hostnames. This step confirms DNS is configured and working correctly.
 
    If the previous steps are working but this step fails, DNS entries for the ESX hosts are not available in the DNS server(s) configured in HCIBench. A DNS can investigate the DNS records and zone delegation, or there are a few easy workarounds:
@@ -37,6 +40,7 @@ This section lists basic steps to troubleshoot an error during validation statin
   <div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:left; vertical-align: middle; padding:20px 20px 20px 20px;">
     <img src="images/ping_by_hostname.png" alt="Ping by Hostname">
   </div>
+
 
 4. From HCIBench insure you can SSH to the SSH hosts. This step validates if there are any ACL or firewall rules that might be affecting connectivity.
 
