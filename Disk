@@ -1,0 +1,30 @@
+# Disk
+
+## Expand the root (/) partition size
+
+1. Note the current amount of space.
+
+  ```df -h /dev/sda2```
+
+2. In vCenter select the HCIBench VM and increase the size of the disk0 to 100GB (or whatever size required).
+
+3. Log into HCIBench run the following command to update the device information
+
+  ```echo 1 > /sys/class/block/sda/device/rescan```
+
+4. Install the parted utility 
+
+  ```tdnf install parted```
+
+5. Resize the partition 
+
+  ```parted /dev/sda resizepart 2 yes 100%```
+
+6. Resize the filesystem 
+
+  ```resize2fs /dev/sda2```
+
+7. The system should not report the resized root partitoin.
+
+  ```df -h /dev/sda2```
+
